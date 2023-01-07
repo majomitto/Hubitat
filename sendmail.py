@@ -16,7 +16,7 @@ message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
 
 try:
     server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-    server.login(sender_email,'<sender password>')
+    server.login(sender_email,'<google app password>')
     server.sendmail(sender_email, receiver_email, message)
     server.quit()
     print 'Email sent!'
